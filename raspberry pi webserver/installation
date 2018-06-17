@@ -1,0 +1,21 @@
+pi@raspberrypi ~ $ sudo apt-get update
+pi@raspberrypi ~ $ sudo apt-get upgrade
+pi@raspberrypi ~ $ sudo apt-get install python-pip python-flask
+
+
+pi@raspberrypi ~ $ sudo pip install flask
+
+pi@raspberrypi ~ $ mkdir web-server
+pi@raspberrypi ~ $ cd web-server
+pi@raspberrypi:~/web-server $
+
+
+inside web-server add app.py
+
+
+pi@raspberrypi:~/web-server $ mkdir templates
+pi@raspberrypi:~/web-server $ cd templates
+pi@raspberrypi:~/web-server/templates $
+
+
+inside template add main.html
