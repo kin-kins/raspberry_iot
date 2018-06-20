@@ -4,7 +4,7 @@ import smtplib
 msg="it works"
 server=smtplib.SMTP("smtp.gmail.com",587)
 server.starttls()
-server.login("spadetch@gmail.com", "spadetch581")
+server.login("YOUR GMAIL ID", "YOUR PASSWORD")
 GPIO.setmode(GPIO.BCM);
 ledPin = 23 # Broadcom pin 23 (P1 pin 16)
 butPin = 17 # Broadcom pin 17 (P1 pin 11)
