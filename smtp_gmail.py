@@ -10,7 +10,7 @@ ledPin = 23 # Broadcom pin 23 (P1 pin 16)
 butPin = 17 # Broadcom pin 17 (P1 pin 11)
 GPIO.setup(23,GPIO.OUT)
 GPIO.setup(17,GPIO.IN)
-msg = "motion detection recieved "
+msg = "motion detection recieved " 
 print("Here we go! Press CTRL+C to exit")
 try:
     while True :
