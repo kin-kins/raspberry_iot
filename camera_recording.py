@@ -1,7 +1,7 @@
 from picamera import PiCamera
 from time import sleep
 
-camera=PiCamera()
+camera=PiCamera() 
 
 camera.start_preview()
 camera.start_recording('/home/pi/video.h264')
