@@ -14,4 +14,4 @@ while True:
 
     #GPIO.output(11,GPIO.LOW)
     time.sleep(1)
-    print ("low")
+    print ("low") 
