@@ -31,7 +31,7 @@ def updatePiInfo():
 	firebase.put('/Control', '/tap',tap)
 	firebase.put('/Control', '/dust',dust)
 	'''temp=firebase.get('/Control', '/temp')
-	humid=firebase.get('/Control', '/humid')'''
+	humid=firebase.get('/Control', '/humid')
 	print result
 	
 	if ( result == "on" ): 	  		
@@ -40,7 +40,7 @@ def updatePiInfo():
 	else :
 		if ( result == "off" ):
 			print "Lights off"
-			GPIO.output(18,GPIO.LOW)
+			GPIO.output(18,GPIO.LOW)'''
 
 
 #firebase.post("/Control/device1", "off")
