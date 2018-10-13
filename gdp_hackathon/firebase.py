@@ -9,16 +9,29 @@ import json
 import os 
 from functools import partial
 
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 GPIO.cleanup()
 GPIO.setwarnings(False)
 GPIO.setup(18,GPIO.OUT)
+GPIO.setup(11,GPIO.IN)
+GPIO.setup(13,GPIO.IN)
+GPIO.setup(15,GPIO.IN)
 
 firebase = firebase.FirebaseApplication('https://YOUR-FIREBASE-URL.firebaseio.com', None)
 #firebase.put("/Control", "/device1", "on")
 
 def updatePiInfo():
-	result = firebase.get('/Control', '/device1')
+	
+	gas= GPIO.input(11)
+	tap=GPIO.input(13)
+	dust=GPIO.input(15)
+	firebase.put("/Control", "/device1", "off")
+	
+	firebase.put('/Control', '/gas',gas)
+	firebase.put('/Control', '/tap',tap)
+	firebase.put('/Control', '/dust',dust)
+	'''temp=firebase.get('/Control', '/temp')
+	humid=firebase.get('/Control', '/humid')'''
 	print result
 	
 	if ( result == "on" ): 	  		
