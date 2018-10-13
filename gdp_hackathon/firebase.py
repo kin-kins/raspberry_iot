@@ -22,10 +22,11 @@ firebase = firebase.FirebaseApplication('https://spadex-e8d4a.firebaseio.com/', 
 
 def updatePiInfo():
 	
-	gas= GPIO.input(11)
-	tap=GPIO.input(13)
-	dust=GPIO.input(15)
-	firebase.put("/Control", "/device1", "off")
+	tap= GPIO.input(11)
+	dust=GPIO.input(13)
+	gas=GPIO.input(15)
+	print(tap)
+	print(dust)
 	
 	firebase.put('/Control', '/gas',gas)
 	firebase.put('/Control', '/tap',tap)
@@ -54,3 +55,4 @@ while True:
         #sleepTime = firebase.get("/Settings/info_update_time_interval", None)
         #sleepTime = int(sleepTime)
 	sleep(1)
+
