@@ -17,7 +17,7 @@ GPIO.setup(11,GPIO.IN)
 GPIO.setup(13,GPIO.IN)
 GPIO.setup(15,GPIO.IN)
 
-firebase = firebase.FirebaseApplication('https://YOUR-FIREBASE-URL.firebaseio.com', None)
+firebase = firebase.FirebaseApplication('https://spadex-e8d4a.firebaseio.com/', None)
 #firebase.put("/Control", "/device1", "on")
 
 def updatePiInfo():
